@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'Admin index.html' %}
+{% block body %}
+<body><h1 align="center">Manage HOD</h1><br>
+<form id="form1" name="form1" method="post" action="/add_Hod#about">
+  <div align="center">
+    <div style="overflow-x:auto;">
+
+    <table width="998" height="262" border="1" id="customers">
+      <tr>
+        <th width="132" height="45" scope="col">Name</th>
+        <th width="180" scope="col">Address</th>
+        <th width="170" scope="col">Gender</th>
+        <th width="263" scope="col">Department</th>
+        <th width="130" scope="col">Email</th>
+        <th width="83" scope="col">&nbsp;</th>
+      </tr>
+      {% for i in value %}
+      <tr>
+        <td height="170">&nbsp;{{i[2]}} {{i[3]}}</td>
+        <td>&nbsp;{{i[5]}} {{i[6]}} {{i[7]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[11]}}</td>
+        <td>{{i[8]}}</td>
+        <td><label><a href="edit_hod?id={{i[0]}}">Edit</a></label><br><br>
+        <a href="delete_hod?id={{i[1]}}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table><br>
+     <center><input type="submit" name="Submit" value="Add"  class="btn btn-info"/></center>
+  </div>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

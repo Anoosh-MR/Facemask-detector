@@ -1,0 +1,31 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'staff index.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="sending_complaints">
+  <table width="346" height="165" border="1" id="customers">
+    <tr>
+      <th scope="row">Complaint</th>
+      <td><label>
+        <input type="text" name="textfield" required /><th height="55" colspan="2" scope="row"><input type="submit" name="Submit" value="Send" class="btn btn-info"/></th>
+      </label></td>
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<th height="55" colspan="2" scope="row"><input type="submit" name="Submit" value="Send" class="btn btn-info"/></th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<th colspan="2" scope="row"><label><br />-->
+        <!--<a href="view_reply">View reply</a></label></th>-->
+    <!--</tr>-->
+  </table>
+  <th colspan="2" scope="row"><label><br />
+        &nbsp;&nbsp;&nbsp;<a href="view_reply">View reply</a></label></th>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->

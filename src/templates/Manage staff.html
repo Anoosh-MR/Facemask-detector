@@ -1,0 +1,39 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'hod index.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="add_staff">
+  <div align="center">
+    <table width="885" height="374" border="2" class="table table-bordered table-hover" id="customers">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Department</th>
+        <th scope="col">Email</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+      {% for i in value %}
+      <tr>
+        <td>{{i[2]}} {{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}} {{i[6]}} {{i[7]}}</td>
+        <td>{{i[12]}}</td>
+        <td>{{i[9]}}</td>
+        <td><p><a href="edit_staff?id={{i[0]}}">Edit</a></p><br><br>
+        <p><a href="delete_staff?id={{i[0]}}">Delete</a></p></td>
+      </tr>
+      {% endfor %}
+      </table>
+       <center> <input type="submit" name="Submit" value="Add" class="btn btn-info" /></center>
+    <label></label>
+  </div>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->
